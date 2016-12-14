@@ -4,7 +4,7 @@ module.exports = function(plugin, state) {
     const initialText = state.startBlock.text;
     const initialSelection = state.selection;
 
-    state = plugin.transforms.wrapInList(state.transform()).apply();
+    state = plugin.transforms.wrapInList(state.transform(), "list_ol").apply();
 
     state = state.transform().undo().apply();
 
